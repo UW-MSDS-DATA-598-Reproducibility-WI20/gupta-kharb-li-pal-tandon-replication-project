@@ -27,6 +27,8 @@ The links to download the dataset have been well documented in the repository pr
 - R Markdown 2.1
 - Gensim 3.8.0
 - pyLDAvis 2.1.2
+- Reticulate 1.14
+
 ### Python libraries
 - pandas 1.0.1
 - nltk 3.4.5
