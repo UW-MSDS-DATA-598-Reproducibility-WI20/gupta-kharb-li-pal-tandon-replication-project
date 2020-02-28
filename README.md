@@ -25,6 +25,7 @@ The links to download the dataset have been well documented in the repository pr
 - Windows 10 Home x64
 - R 3.6.2
 - R Markdown 2.1
+- Python 3.6.0
 ### Python libraries
 - nltk 3.4.5
 - pandas 1.0.1
