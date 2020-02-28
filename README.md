@@ -12,7 +12,7 @@ The purpose of this project is to reproduce key claims from a research paper for
 
 ## Contents
 
-The purpose of this project is to reproduce the figures published in the Insta-Dead paper by Damien Huffer and Shawn Graham. The paper explores the trade of human skulls and bones taking place on the social media platform, Instagram. We would like to use the data provided by the authors to reproduce the results of the paper, ideally using R. 
+The purpose of this project is to reproduce the figures published in the Insta-Dead paper by Damien Huffer and Shawn Graham. The paper explores the trade of human skulls and bones taking place on the social media platform, Instagram. We would like to use the data provided by the authors to reproduce the results of the paper, ideally using R. The figure we are reproducing involves topic modelling for posts by a single Instagram user/trader. For LDA, by using the gensim library in Python as a replacement for the mallet library we would like to reproduce similar topics and generate similar topic weights for eaach post by the user.
 
 Paper:
 Huffer, D. and Graham, S. 2017 The Insta-Dead: The rhetoric of the human remains trade on Instagram, Internet Archaeology 45. https://doi.org/10.11141/ia.45.5.
@@ -22,14 +22,12 @@ Huffer, D. and Graham, S. 2017 The Insta-Dead: The rhetoric of the human remains
 The links to download the dataset have been well documented in the repository provided with the code [here](https://github.com/shawngraham/insta-dead-article). The README.md file explains the structure of the training and test datasets. The data used to replicate the topic modeling is is available [here](https://github.com/shawngraham/insta-dead-article/blob/master/data/posts-formatted-for-topicmodelling.csv).
 
 ## Dependencies
-- Windows 10, CentOS Linux release 7.5.1804
-- R 3.5.3
+- Windows 10 Home x64
+- R 3.6.2
 - R Markdown 2.1
-- Gensim 3.8.0
-- pyLDAvis 2.1.2
 ### Python libraries
-- pandas 1.0.1
 - nltk 3.4.5
+- pandas 1.0.1
 - gensim 3.8.1
 - numpy 1.18.1
 
