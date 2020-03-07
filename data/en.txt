@@ -194,6 +194,9 @@ hopefully
 how
 howbeit
 however
+human
+humanbone
+humanskull
 i
 ie
 if
@@ -372,6 +375,8 @@ she
 should
 since
 six
+skull
+skulls
 so
 some
 somebody
