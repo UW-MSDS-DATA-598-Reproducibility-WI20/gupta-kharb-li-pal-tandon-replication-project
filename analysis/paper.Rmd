@@ -56,6 +56,7 @@ py_install("pandas", pip = TRUE)
 py_install("nltk", pip = TRUE)
 py_install("gensim", pip = TRUE)
 py_install("numpy", pip = TRUE)
+py_config()
 ```
 
 ```{python include=FALSE}
