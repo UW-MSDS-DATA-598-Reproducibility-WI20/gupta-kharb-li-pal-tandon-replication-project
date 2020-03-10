@@ -14,13 +14,12 @@ URL: https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/gupta-kharb-li-pal
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports:
+Imports:,
     bookdown (>= 0.17),
     ggplot2 (>= 3.2.1),
-    mallet (>= 1.0),
+    knitr (>= 1.28),
     reshape2 (>= 1.4.3),
-    reticulate (>= 1.14),
-    rJava (>= 0.9-11)
+    reticulate (>= 1.14)
 Depends:
     R (>= 3.6.2)
 RoxygenNote: 7.0.2
