@@ -61,7 +61,7 @@ py_install("numpy", pip = TRUE)
 
 ```{python include=FALSE}
 import nltk
-nltk.download('stopwords')
+#nltk.download('stopwords')
 import re
 import pandas as pd
 from pprint import pprint

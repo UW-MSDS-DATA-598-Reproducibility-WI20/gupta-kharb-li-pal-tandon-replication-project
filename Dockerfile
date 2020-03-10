@@ -20,6 +20,7 @@ RUN . /etc/environment \
   && R -e 'install.packages("remotes", repo = "https://cloud.r-project.org")' \
   && R -e 'remotes::install_github("rstudio/reticulate")' \
   && R -e 'reticulate::virtualenv_create()' \
+  && R -e 'reticulate::py_config()'
   # build this compendium package
   && R -e "devtools::install('/gupta-kharb-li-pal-tandon-replication-project', dep=TRUE)" \
   # render the manuscript into a docx, you'll need to edit this if you've
