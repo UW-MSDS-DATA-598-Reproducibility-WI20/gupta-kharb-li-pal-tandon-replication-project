@@ -7,6 +7,7 @@ MAINTAINER Chavi Gupta <chavig080@gmail.com>
 COPY . /gupta-kharb-li-pal-tandon-replication-project
 
 #install pacakges for python libraries
+
 RUN apt-get update
 RUN apt-get install -y libpython-dev
 RUN apt-get install -y libpython3-dev
@@ -21,5 +22,4 @@ RUN . /etc/environment \
   && R -e "devtools::install('/gupta-kharb-li-pal-tandon-replication-project', dep=TRUE)" \
   # render the manuscript into a docx, you'll need to edit this if you've
   # customised the location and name of your main Rmd file
-  && R -e 'reticulate::py_config()'
-  # && R -e "rmarkdown::render('/gupta-kharb-li-pal-tandon-replication-project/analysis/paper.Rmd')"
+  && R -e "rmarkdown::render('/gupta-kharb-li-pal-tandon-replication-project/analysis/paper.Rmd')"

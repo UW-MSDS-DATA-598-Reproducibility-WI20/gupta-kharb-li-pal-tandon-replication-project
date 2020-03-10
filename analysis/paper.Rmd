@@ -51,12 +51,12 @@ The result of this code is a csv file called 'prob.csv' (generated in the data f
 # install.packages("reticulate",repos = "http://cran.us.r-project.org")
 library(reticulate)
 use_virtualenv("r-reticulate")
+use_python(Sys.which("python"))
 py_available(TRUE)
 py_install("pandas", pip = TRUE)
 py_install("nltk", pip = TRUE)
 py_install("gensim", pip = TRUE)
 py_install("numpy", pip = TRUE)
-py_config()
 ```
 
 ```{python include=FALSE}
