@@ -10,8 +10,6 @@ COPY . /gupta-kharb-li-pal-tandon-replication-project
 RUN apt-get update
 RUN apt-get install -y libpython-dev
 RUN apt-get install -y libpython3-dev
-RUN apt install -y python3-venv python3-pip python3-virualenv
-
 
 # go into the repo directory
 RUN . /etc/environment \
@@ -23,5 +21,5 @@ RUN . /etc/environment \
   && R -e "devtools::install('/gupta-kharb-li-pal-tandon-replication-project', dep=TRUE)" \
   # render the manuscript into a docx, you'll need to edit this if you've
   # customised the location and name of your main Rmd file
-  && R -e 'reticulate::py_config'
+  && R -e 'reticulate::py_config()'
   # && R -e "rmarkdown::render('/gupta-kharb-li-pal-tandon-replication-project/analysis/paper.Rmd')"
