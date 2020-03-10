@@ -28,7 +28,7 @@ The links to download the dataset have been well documented in the repository pr
 
 ## Dependencies
 - Windows 10 Home x64
-- R 3.6.2
+- R 3.6.0
 - R Markdown 2.1
 - Reticulate 1.14
 - Python 3.6.0
