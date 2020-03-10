@@ -6,6 +6,11 @@ MAINTAINER Chavi Gupta <chavig080@gmail.com>
 
 COPY . /gupta-kharb-li-pal-tandon-replication-project
 
+#install pacakges for python libraries
+RUN apt-get update
+RUN apt-get install -y libpython-dev
+RUN apt-get install -y libpython3-dev
+
 # go into the repo directory
 RUN . /etc/environment \
   # Install linux depedendencies here
