@@ -1,4 +1,4 @@
-Package: instaDeadReplication.withGensim
+Package: instaDeadReplication
 Type: Package
 Title: Replicating Topic Modelling for Human Remains Post on Instagram (using Gensim)
 Version: 0.1.0
