@@ -50,6 +50,7 @@ The result of this code is a csv file called 'prob.csv' (generated in the data f
 ```{r cache=TRUE, include=FALSE}
 # install.packages("reticulate",repos = "http://cran.us.r-project.org")
 library(reticulate)
+use_condaenv("r-reticulate")
 use_virtualenv("r-reticulate")
 py_available(TRUE)
 py_install("pandas", pip = TRUE)
