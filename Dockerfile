@@ -8,8 +8,12 @@ COPY . /gupta-kharb-li-pal-tandon-replication-project
 
 #install pacakges for python libraries
 RUN apt-get update
-RUN apt-get install -y libpython-dev
-RUN apt-get install -y libpython3-dev
+RUN apt-get upgrade -y
+RUN apt-get install curl -y
+RUN curl -O https://bootstrap.pypa.io/get-pip.py
+RUN python get-pip.py
+RUN apt-get install python-virtualenv -y
+RUN pip install virtualenv --upgrade
 
 # go into the repo directory
 RUN . /etc/environment \
