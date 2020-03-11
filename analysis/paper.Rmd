@@ -79,9 +79,9 @@ import numpy
 
 ```{python include=FALSE}
 ### Load stop words from en.text to process and clean the data
-stop_words = pd.read_csv('../data/en.txt',header=None)
+stop_words = pd.read_csv("../data/en.txt",header=None)
 stop_words=stop_words[0].to_list()
-df = pd.read_csv('../data/posts-formatted-for-topicmodelling.csv', encoding='latin-1')
+df = pd.read_csv("../data/posts-formatted-for-topicmodelling.csv", encoding="latin-1")
 df.head()
 def sent_to_words(sentences):
     for sentence in sentences:
