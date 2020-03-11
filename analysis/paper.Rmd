@@ -85,14 +85,13 @@ df = pd.read_csv('../data/posts-formatted-for-topicmodelling.csv', encoding='lat
 df.head()
 def sent_to_words(sentences):
     for sentence in sentences:
-        yield(gensim.utils.simple_preprocess(str(sentence),deacc=True)) #deacc = True removes punctuation
+        yield(gensim.utils.simple_preprocess(str(sentence),deacc=True))
 
 data_words = list(sent_to_words(df.text))
 
 def remove_stopwords(texts):
     return[[word for word in simple_preprocess(str(doc)) if word not in stop_words] for doc in texts]
 data_words_nostops = remove_stopwords(data_words)
-#print(data_words_nostops)
 ```
 
 ```{python include=FALSE}
