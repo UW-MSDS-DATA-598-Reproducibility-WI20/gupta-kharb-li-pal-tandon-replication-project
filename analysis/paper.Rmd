@@ -21,7 +21,7 @@ We have chosen to replicate one such method in this project which involves topic
 From the paper [@huffer_graham_2017], we are replicating Figure \@ref(fig:original-fig) (Figure 5 in the paper). This figure shows different topics modeled from the posts from the account of a single trader/user on Instagram. The key conclusions from this figure are that this particular trader is interested in "real" or authentic human bone artifacts. The original method used by the authors of the paper for the topic modeling is through the use of the ‘mallet’ package in R. We have used ‘gensim’ package in python for the same. We make this change of library so as to replicate the study, as this is like changing the tools/environment in which analysis is done but it should not change the results.
 
 ```{r, original-fig, fig.cap="Original figure from [@huffer_graham_2017]", echo=FALSE}
-knitr::include_graphics("figures/fig5-singletrader.png")
+knitr::include_graphics("../analysis/figures/fig5-singletrader.png")
 ```
 
 # Replication Method
@@ -47,7 +47,7 @@ We kept the same criteria for stopwords and the number of topics as the original
 The python code used for replication can be found [here](https://github.com/chavi-g/Replication-Project-DATA598/blob/master/notes/LDA_model.py).
 The result of this code is a csv file called 'prob.csv' (generated in the data folder) that gives the probability matrix that is to be rendered in R. The R function called `plot_figure()` included in the Rmd is the final R code that creates the output figure 'output_figure.png' in the figures folder.
 
-```{r cache=TRUE, include=FALSE}
+```{r include=FALSE}
 # install.packages("reticulate",repos = "http://cran.us.r-project.org")
 library(reticulate)
 use_virtualenv("r-reticulate")
@@ -69,7 +69,7 @@ import gensim
 import gensim.corpora as corpora
 from gensim.utils import simple_preprocess
 from gensim.models import CoherenceModel
-import numpy 
+import numpy
 #import pyLDAvis
 #import pyLDAvis.gensim
 #import matplotlib.pyplot as plt
@@ -79,10 +79,9 @@ import numpy
 
 ```{python include=FALSE}
 ### Load stop words from en.text to process and clean the data
-
-stop_words = pd.read_csv('..\data\en.txt',header=None)
+stop_words = pd.read_csv('../data/en.txt',header=None)
 stop_words=stop_words[0].to_list()
-df = pd.read_csv('..\data\posts-formatted-for-topicmodelling.csv', encoding='latin-1')
+df = pd.read_csv('../data/posts-formatted-for-topicmodelling.csv', encoding='latin-1')
 df.head()
 def sent_to_words(sentences):
     for sentence in sentences:
@@ -140,7 +139,7 @@ for topic,words in topics_words:
 doct=lda.get_document_topics(corpus,minimum_probability =0.0)
 df=pd.DataFrame([[x[1] for x in y] for y in doct], index = [x for x in range(len(doct))])
 df.columns = l
-df.to_csv("..\data\prob.csv")
+df.to_csv("../data/prob.csv")
 ```
 
 
