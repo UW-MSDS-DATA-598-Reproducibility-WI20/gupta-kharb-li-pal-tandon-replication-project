@@ -81,7 +81,7 @@ import numpy
 ### Load stop words from en.text to process and clean the data
 stop_words = pd.read_csv("../data/en.txt",header=None)
 stop_words=stop_words[0].to_list()
-df = pd.read_csv("../data/posts-formatted-for-topicmodelling.csv", encoding="latin-1")
+df = pd.read_csv("../data/posts-formatted-for-topicmodelling.csv")
 df.head()
 def sent_to_words(sentences):
     for sentence in sentences:
@@ -121,7 +121,7 @@ print(l2)
 
 Figure \@ref(fig:original-fig) shows the top 25 topics extracted in the original paper.
 ```{r,original-topics, fig.cap="Original top 25 topics", echo=FALSE}
-knitr::include_graphics("../analysis/figures/original-topics-list.png")
+knitr::include_graphics("../analysis/figures/original-topics-list.PNG")
 ```
 
 ```{python include=FALSE}
