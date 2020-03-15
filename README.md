@@ -42,5 +42,13 @@ The links to download the dataset have been well documented in the repository pr
 - gensim 3.8.1
 - numpy 1.18.1
 
+## Licenses
+
+**Text and Figures:** CC-BY-4.0
+
+**Code**: The project is licensed as MIT. Please read our [license details](LISCENCE.md).
+
+**Data**: CC-0 attribution requested in reuse
+
 ## Contributing
 We welcome contributions from everyone. Before you get started, please see our [contributor guidelines](CONTRIBUTING.md). Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
