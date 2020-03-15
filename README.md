@@ -26,7 +26,8 @@ Huffer, D. and Graham, S. 2017 The Insta-Dead: The rhetoric of the human remains
 
 
 ## Data
-The links to download the dataset have been well documented in the repository provided with the code [here](https://github.com/shawngraham/insta-dead-article). The README.md file explains the structure of the training and test datasets. The data used to replicate the topic modeling is is available [here](https://github.com/shawngraham/insta-dead-article/blob/master/data/posts-formatted-for-topicmodelling.csv).
+The links to download the dataset have been well documented in the repository provided by the original authors [here](https://github.com/shawngraham/insta-dead-article).  
+The data used to replicate the topic modeling is is available [here](/data).
 
 ## Dependencies
 - Windows 10 Home x64
