@@ -1,3 +1,5 @@
 ^\.github$
 ^Dockerfile$
 ^\.github/workflows/R-CMD-check\.yaml$
+^.*\.Rproj$
+^\.Rproj\.user$
