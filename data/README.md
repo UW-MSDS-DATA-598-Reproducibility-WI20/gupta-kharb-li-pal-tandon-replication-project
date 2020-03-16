@@ -6,5 +6,8 @@ The project focuses on replacating the Insta-dead research paper and to reproduc
 
 ### Data:
 
+The data consists of year, username, text. Here year is the date of posting, username is the ID associated with the particular user and text is the content of the post. Dataset consists of 132,225 instagram posts pertaining to hashtags related to this area of study.
+
+
 
 ### Explaination of Data:
