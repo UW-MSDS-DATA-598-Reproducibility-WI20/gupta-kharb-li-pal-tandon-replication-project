@@ -17,6 +17,11 @@ The purpose of this project is to reproduce key claims from a research paper for
 - [Ankit Tandon](https://github.com/ankittandon) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-6319-7670)
 - [Yunhong Li](https://github.com/mabelli)  [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-0249-3975)
 
+## Archival Copy
+
+An archival copy of this project is stored on osf.io  
+DOI: https://doi.org/10.17605/OSF.IO/YVP6A
+
 ## Contents
 
 The purpose of this project is to reproduce the figures published in the Insta-Dead paper by Damien Huffer and Shawn Graham. The paper explores the trade of human skulls and bones taking place on the social media platform, Instagram. We would like to use the data provided by the authors to reproduce the results of the paper, ideally using R. The figure we are reproducing involves topic modelling for posts by a single Instagram user/trader. For LDA, by using the gensim library in Python as a replacement for the mallet library we would like to reproduce similar topics and generate similar topic weights for eaach post by the user.
@@ -26,7 +31,8 @@ Huffer, D. and Graham, S. 2017 The Insta-Dead: The rhetoric of the human remains
 
 
 ## Data
-The links to download the dataset have been well documented in the repository provided with the code [here](https://github.com/shawngraham/insta-dead-article). The README.md file explains the structure of the training and test datasets. The data used to replicate the topic modeling is is available [here](https://github.com/shawngraham/insta-dead-article/blob/master/data/posts-formatted-for-topicmodelling.csv).
+The links to download the dataset have been well documented in the repository provided by the original authors [here](https://github.com/shawngraham/insta-dead-article).  
+The data used to replicate the topic modeling is is available [here](/data).
 
 ## Dependencies
 - Windows 10 Home x64
