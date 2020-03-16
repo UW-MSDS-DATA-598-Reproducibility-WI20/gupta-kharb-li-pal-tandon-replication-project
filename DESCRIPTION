@@ -5,7 +5,7 @@ Version: 0.1.0
 Authors@R: c(
           person("Gupta", "Chavi", email = "chavig080@gmail.com", role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0003-3884-8456")),
           person("Kharb", "Kirti", email = "kirtikharb.4@gmail.com", role = c("aut", "cph"), comment = c(ORCID = "0000-0002-5066-8549")),
-          person("Li", "Mabel", email = "", role = c("aut", "cph"), comment = c(ORCID = "")),
+          person("Li", "Mabel", email = "yli4@fandm.edu", role = c("aut", "cph"), comment = c(ORCID = "0000-0002-0249-3975")),
           person("Pal", "Ankita", email = "", role = c("aut", "cph"), comment = c(ORCID = "0000-0001-8411-968X")),
           person("Tandon", "Ankit", email = "antand@uw.edu", role = c("aut", "cph"), comment = c(ORCID = "0000-0001-6319-7670")))
 Description: Replicating the topic modelling results for a single user on instagram from the paper by Huffer, D. and Graham, S. (2017). 
