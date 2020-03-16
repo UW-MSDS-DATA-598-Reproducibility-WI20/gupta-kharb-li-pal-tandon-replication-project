@@ -7,7 +7,7 @@ Authors@R: c(
           person("Kharb", "Kirti", email = "kirtikharb.4@gmail.com", role = c("aut", "cph"), comment = c(ORCID = "0000-0002-5066-8549")),
           person("Li", "Mabel", email = "", role = c("aut", "cph"), comment = c(ORCID = "")),
           person("Pal", "Ankita", email = "", role = c("aut", "cph"), comment = c(ORCID = "0000-0001-8411-968X")),
-          person("Tandon", "Ankit", email = "", role = c("aut", "cph"), comment = c(ORCID = "0000-0001-6319-7670")))
+          person("Tandon", "Ankit", email = "antand@uw.edu", role = c("aut", "cph"), comment = c(ORCID = "0000-0001-6319-7670")))
 Description: Replicating the topic modelling results for a single user on instagram from the paper by Huffer, D. and Graham, S. (2017). 
 URL: https://github.com/UW-MSDS-DATA-598-Reproducibility-WI20/gupta-kharb-li-pal-tandon-replication-project
 License: MIT + file LICENSE
