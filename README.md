@@ -17,6 +17,11 @@ The purpose of this project is to reproduce key claims from a research paper for
 - [Ankit Tandon](https://github.com/ankittandon) [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-6319-7670)
 - [Yunhong Li](https://github.com/mabelli)  [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-0249-3975)
 
+## Archival Copy
+
+An archival copy of this project is stored on osf.io  
+DOI: https://doi.org/10.17605/OSF.IO/YVP6A
+
 ## Contents
 
 The purpose of this project is to reproduce the figures published in the Insta-Dead paper by Damien Huffer and Shawn Graham. The paper explores the trade of human skulls and bones taking place on the social media platform, Instagram. We would like to use the data provided by the authors to reproduce the results of the paper, ideally using R. The figure we are reproducing involves topic modelling for posts by a single Instagram user/trader. For LDA, by using the gensim library in Python as a replacement for the mallet library we would like to reproduce similar topics and generate similar topic weights for eaach post by the user.
