@@ -26,7 +26,8 @@ knitr::include_graphics("../analysis/figures/fig5-singletrader.png")
 
 # Replication Method
 
-Figure 5: Topics within the posts of a single Instagram account, is related to topic modeling and was originally carried out using the ‘mallet’ package in R. We wanted to explore how topic-modeling was carried out in python. Python is a very powerful tool and performing a topic-model on it would be an important learning aspect. But the visualization powers of R is undeniable. So to club the strong aspects of both the languages, we process the data and bring it to a suitable form using python and then further using this result to create a visualization. We decided to use the ‘gensim’ package in Python to perform topic modeling and the ggplot library in R to draw the visualization.  
+\@ref(fig:original-fig), is related to topic modeling and was originally carried out using the ‘mallet’ package in R. We choose to vary the topic modeling algorithm used in this paper. We wanted to explore how topic modeling is carried out in Python using the 'gensim' library. The Gensim library uses another LDA method like mallet, that performs Variational Baye's sampling techniques. This is different from the mallet algorithm that is based on Gibb's sampling. The Gensim algorithm performs faster than mallet due to fewer iterations. However the mallet algorithm is known to give more accurate results. We hope to achieve similar results by using Gensim.
+Gensim provides very desciptive in-built visualizations in Python. However the results are not easy to compare with the R visualization. Thus, we decided to use the ‘gensim’ package in Python to perform topic modeling and the ggplot library in R to draw the visualization for comparison.  
 
 **Steps:**  
 1. We used the ‘reticulate’ package which helps us install python packages in R. The main package to be used is the python Gensim package.  
@@ -41,7 +42,7 @@ Figure 5: Topics within the posts of a single Instagram account, is related to t
 10. We used qqplot to approximate the visualization in R.  
 11. We also displayed all the words relating to a particular topic in R.  
 
-We kept the same criteria for stopwords and the number of topics as the original study. We followed the same analytical procedure. The ‘gensim’ package in Python is for topic modeling and has similar functions to the ‘mallet’ package used by the original study. Since we use the same dataset and methods and only change the topic modeling library i.e. the tools and the environment of the experiment, the result should be the same. 
+We kept the same criteria for stopwords and the number of topics as the original study. We followed the same analytical procedure. Since we use the same dataset and methods and only change the topic modeling library i.e. the tools and the environment of the experiment, the result should be similar. 
 
 **Reproducible steps:**  
 The python code used for replication can be found [here](https://github.com/chavi-g/Replication-Project-DATA598/blob/master/notes/LDA_model.py).
@@ -59,7 +60,7 @@ py_install("gensim", pip = TRUE)
 py_install("numpy", pip = TRUE)
 ```
 
-```{python include=FALSE}
+```{python include=TRUE}
 import nltk
 #nltk.download('stopwords')
 import re
@@ -77,9 +78,9 @@ import numpy
 #import warnings
 ```
 
-```{python include=FALSE}
+```{python include=TRUE}
 ### Load stop words from en.text to process and clean the data
-stop_words = pd.read_csv("../data/en.txt",header=None)
+stop_words = pd.read_csv("../data/en.txt", header=None)
 stop_words=stop_words[0].to_list()
 df = pd.read_csv("../data/posts-formatted-for-topicmodelling.csv")
 df.head()
@@ -202,8 +203,14 @@ knitr::include_graphics("../analysis/figures/output_figure.png")
 
 # Conclusion
 
-Using the python package 'gensim' for performing the topic modeling and R for compiling the data and plotting the figure, we are able to reproduce the experimental data and reproduce the Figure \@ref(fig:original-fig) (Figure 5 in the paper) to a large extent. Both Figure \@ref(fig:final-plot) and \@ref(fig:original-fig) in the paper show three keywords for each topic and the frequency of each topic for different documents. However, the selected keywords for the 25 topics in our reproduced figure are slightly different than those in the original one, although they share many overlaps, such as `oddities`, `skullart`, `tattoo` and `bones`.  
-This can be attributed to the differences in the internal workings of the packages in R and python. In the original publication, the authors created a topic trainer object, loaded the documents into the object, trained the model, and normalized the results. In our replication project, we broke the texts in each document into words, mapped these words to Ids, and trained the LDA model. The difference in the results probably lie in the fact that Mallet uses Gibbs Sampling which runs in iterations and is more precise, while Gensim uses Bayes Sampling and is faster in training but less precise. The difference in sampling techniques could lead to very different topic clusters.  
+Using the python package 'gensim' for performing the topic modeling and R for compiling the data and plotting the figure, we are able to reproduce the experimental data and reproduce the Figure \@ref(fig:original-fig) (Figure 5 in the paper) to a large extent. Both Figure \@ref(fig:final-plot) and \@ref(fig:original-fig) in the paper show three keywords for each topic and the frequency of each topic for different documents. However, the selected keywords for the 25 topics in our reproduced figure are slightly different than those in the original one, although they share many overlaps, such as `oddities`, `skullart`, `tattoo` and `bones`. This can be attributed to the differences in the internal workings of the packages in R and python.   
+Based on the comparison of the complete topic names, we find some topics in the replication method that are semantically quite similar to the original topics. 
+
+Replication Topic: 'Bones.museum.history.paris.catacombs.Skeleton.travel.photo.face.humanremains'  
+Original Topic: 'd\udc bones e\u b\u death f\u a\u d\u paris catacombs'  
+
+Both these topics refer to an underground museum in Paris called the Catacombs, which showcases thousands of skullheads. This topic classifies travel and tourism related documents. 
+In the original publication, the authors created a topic trainer object, loaded the documents into the object, trained the model, and normalized the results. In our replication project, we broke the texts in each document into words, mapped these words to ids, and trained the LDA model. The difference in the results probably lie in the fact that Mallet uses Gibbs Sampling which runs in iterations and is more precise, while Gensim uses Bayes Sampling and is faster in training but less precise. The difference in sampling techniques could lead to very different topic clusters.  
 We have displayed all the words related to the 25 topics to aid the comparison of our results to the original results. Although we used the same analysis procedure, a different library, and a different running environment, we do not get the exact same figure, but one which is in close resemblance to the figure in the original publication. The diversions are likely due to detailed executions of the models rather than differences in principles.
 
 # References
