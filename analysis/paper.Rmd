@@ -60,7 +60,7 @@ py_install("gensim", pip = TRUE)
 py_install("numpy", pip = TRUE)
 ```
 
-```{python include=TRUE}
+```{python include=FALSE}
 import nltk
 #nltk.download('stopwords')
 import re
@@ -78,7 +78,7 @@ import numpy
 #import warnings
 ```
 
-```{python include=TRUE}
+```{python include=FALSE}
 ### Load stop words from en.text to process and clean the data
 stop_words = pd.read_csv("../data/en.txt", header=None)
 stop_words=stop_words[0].to_list()
